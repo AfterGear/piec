@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Olter 3K</title>
+        <script>
+            function WinOpen_olter_1()
+            {
+                window.open("grafika1.html","grafika1","toolbar=no,directories=no,menubar=no,height=400,width=250,top=700,left=200");
+            }
+
+            function WinOpen_olter_2()
+            {
+                window.open("grafika2.html","grafika2","toolbar=no,directories=no,menubar=no,height=400,width=250,top=500,left=500");
+            }
+
+            function WinOpen_olter_3()
+            {
+                window.open("grafika3.html","grafika3","toolbar=no,directories=no,menubar=no,height=400,width=250,top=300,left=800");
+            }
+            
+            function WinOpen_olter_4()
+            {
+                window.open("grafika4.html","grafika4","toolbar=no,directories=no,menubar=no,height=400,width=250,top=100,left=1100");
+            }
+
+            function okno_zamknij_olter_1()
+            { 
+                window.close() 
+            } 
+        </script>
+        <style>
+            #hhh {
+                color: red;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="hhh">wykonał: Mikołaj Olter mój numer w dziennuku 15, czyli mam układ [(15) mod 4 = 3] układ 3</p>
+        <center>
+            <input type="button" name="grafika1" value="grafika1" onclick="WinOpen_olter_1()">
+            <input type="button" name="grafika2" value="grafika2" onclick="WinOpen_olter_2()">
+            <input type="button" name="grafika3" value="grafika3" onclick="WinOpen_olter_3()">
+            <input type="button" name="grafika4" value="grafika4" onclick="WinOpen_olter_4()">
+            <br><br><br><br><br>
+            <input type="button" value="zamknij okno" onclick="okno_zamknij_olter_1()"/> 
+        </center>
+    </body>
+</html>
