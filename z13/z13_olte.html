@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                color: red;
+                font-size: 36px;
+            }
+        </style>
+        <script lang="JavaScript">
+            var m_olt = parseFloat(prompt("m = ", ""));
+
+            if (m_olt < 0)
+                document.write("m musi być większe od 0");
+            else
+            {
+                var a = m_olt+1;
+                var b = m_olt*(m_olt+1);
+                document.write("1/" + m_olt + " = " + "1/" + a + " + 1/" + b)
+            }
+        </script>
+    </head>
+</html>
