@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>kod zadania olter</title>
+    </head>
+    <script>
+        window.onload = function() {
+            const htmlArea = document.getElementById("html");
+            const jsArea = document.getElementById("js");
+
+            const params = new URL(document.URL).searchParams;
+            const zHTML = params.get("html");
+            const zJS = params.get("js");
+
+            console.log(zHTML);
+            console.log(zJS);
+
+            fetch("./" + zHTML).then(response => response.text())
+            .then(html => htmlArea.innerHTML = html)
+            .catch(error => console.error(error));
+
+            if (zJS != "none") {
+                fetch("./" + zJS).then(response => response.text())
+                .then(js => jsArea.innerHTML = js)
+                .catch(error => console.error(error));
+            }
+            else {
+                document.getElementById("lblJS").style.visibility = "hidden";
+                jsArea.style.visibility = "hidden";
+                document.getElementById("lblCss").style.visibility = "hidden";
+            }
+        }
+    </script>
+    <body>
+        <label for="html">KOD HTML</label><br>
+        <textarea id="html" rows=30 cols=100></textarea>
+        <br>
+        <br>
+        <label id="lblJS" for="js">KOD JAVASCRIPT</label><br>
+        <textarea id="js" rows=30 cols=100></textarea>
+    </body>
+</html>

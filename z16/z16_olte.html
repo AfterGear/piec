@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                color: red;
+                font-size: 36px;
+            }
+        </style>
+        <script lang="JavaScript">
+            var m_olt1 = parseFloat(prompt("m1 = ", ""));
+            var m_olt2 = parseFloat(prompt("m2 = ", ""));
+
+            if (m_olt1 < 0 && m_olt2 < 0)
+                document.write("m musi być większe od 0");
+            else
+            {
+                var a = m_olt1*m_olt1*m_olt1;
+                var b = 3*m_olt1*m_olt1*m_olt2;
+                var c = 3*m_olt1*m_olt2*m_olt2;
+                var d = m_olt2*m_olt2*m_olt2;
+                var e = a+b+c+d;
+                document.write(a+"<br>");
+                document.write(b+"<br>");
+                document.write(c+"<br>");
+                document.write(d+"<br>");
+                document.write(e+"<br>");
+            }
+        </script>
+    </head>
+</html>
