@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Olter 3K</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div style="color:green;font-size: 45px;">
+            <script lang="JavaScript">
+                var D1_olt = parseFloat(prompt("Dzien1 = ", ""));
+                var G1_olt = parseFloat(prompt("Godzina1 = ", ""));
+                var D2_olt = parseFloat(prompt("Data2 = ", ""));
+                var G2_olt = parseFloat(prompt("Dzien2 = ", ""));
+
+                var start = (D1_olt * (24*60*60)) + (G1_olt * (60*60));
+                var koniec = (D2_olt * (24*60*60)) + (G2_olt * (60*60));
+                document.write(`Ilość sekund między ${D1_olt}.01 ${G1_olt}:00 a ${D2_olt}.01 ${G2_olt}:00 = ${(koniec-start) * -1}`);
+            </script>
+        </div>
+    </body>
+</html>
