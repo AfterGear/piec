@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                font-size: 36px;
+            }
+        </style>
+        <script lang="JavaScript">
+            var A = parseFloat(prompt("m1 = ", ""));
+            var B = parseFloat(prompt("m2 = ", ""));
+
+            if (A < 0 && B < 0)
+                document.write("m musi być większe od 0");
+            else
+            {
+                var a = A*A*A;
+                var b = 3*A*A*B;
+                var c = 3*A*B*B;
+                var d = B*B*B;
+                var e = a+b+c+d;
+
+                document.write(`(${A}+${B})^3 = ${A}^3 + 3*((${A}^2)*${B}) + 3*(${A}*(${B}^2)) + ${B}^3 = ${a} + ${b} + ${c} + ${d} = ${e}`);
+            }
+        </script>
+    </head>
+</html>
