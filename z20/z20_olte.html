@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+
+            let xa_olt, ya_olt;
+            let xb_olt, yb_olt;
+            let xc_olt, yc_olt;
+
+            function AB_olt() {
+                return Math.sqrt(Math.pow(xa_olt - xb_olt, 2) + Math.pow(ya_olt - yb_olt, 2));
+            }
+
+            function BC_olt() {
+                return Math.sqrt(Math.pow(xb_olt - xc_olt, 2) + Math.pow(yb_olt - yc_olt, 2));
+            }
+
+            function AC_olt() {
+                return Math.sqrt(Math.pow(xa_olt - xc_olt, 2) + Math.pow(ya_olt - yc_olt, 2));
+            }
+
+            xa_olt = parseFloat(prompt("Podaj x punktu A"));
+            ya_olt = parseFloat(prompt("Podaj y punktu A"));
+
+            xb_olt = parseFloat(prompt("Podaj x punktu B"));
+            yb_olt = parseFloat(prompt("Podaj y punktu B"));
+
+            xc_olt = parseFloat(prompt("Podaj x punktu C"));
+            yc_olt = parseFloat(prompt("Podaj y punktu C"));
+
+
+            document.write(`AB = ${AB_olt()}<br>`);
+            document.write(`BC = ${BC_olt()}<br>`);
+            document.write(`AC = ${AC_olt()}`);
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
