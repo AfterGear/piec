@@ -2,8 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <script>
-
+        <script defer>
             let xa_olt, ya_olt;
             let xb_olt, yb_olt;
             let xc_olt, yc_olt;
@@ -20,23 +19,44 @@
                 return Math.sqrt(Math.pow(xa_olt - xc_olt, 2) + Math.pow(ya_olt - yc_olt, 2));
             }
 
-            xa_olt = parseFloat(prompt("Podaj x punktu A"));
-            ya_olt = parseFloat(prompt("Podaj y punktu A"));
+            function oblicz() {
+                xa_olt = parseFloat(document.getElementById('input_XA').value);
+                ya_olt = parseFloat(document.getElementById('input_YA').value);
 
-            xb_olt = parseFloat(prompt("Podaj x punktu B"));
-            yb_olt = parseFloat(prompt("Podaj y punktu B"));
+                xb_olt = parseFloat(document.getElementById('input_XB').value);
+                yb_olt = parseFloat(document.getElementById('input_YB').value);
 
-            xc_olt = parseFloat(prompt("Podaj x punktu C"));
-            yc_olt = parseFloat(prompt("Podaj y punktu C"));
+                xc_olt = parseFloat(document.getElementById('input_XC').value);
+                yc_olt = parseFloat(document.getElementById('input_YC').value);
 
+                document.getElementById("res_AB").innerHTML = `AB: ${AB_olt()}`;
+                document.getElementById("res_AC").innerHTML = `AC: ${AC_olt()}`;
+                document.getElementById("res_BC").innerHTML = `BC: ${BC_olt()}`;
 
-            document.write(`AB = ${AB_olt()}<br>`);
-            document.write(`BC = ${BC_olt()}<br>`);
-            document.write(`AC = ${AC_olt()}`);
+                console.log(xa_olt);
+                console.log(ya_olt);
+
+            }
 
         </script>
     </head>
     <body>
+        <p>A:</p>
+        <span>X: </span><input type="text" id="input_XA"><br>
+        <span>Y: </span><input type="text" id="input_YA"><br>
+        
+        <p>B:</p>
+        <span>X: </span><input type="text" id="input_XB"><br>
+        <span>Y: </span><input type="text" id="input_YB"><br>
 
+        <p>C:</p>
+        <span>X: </span><input type="text" id="input_XC"><br>
+        <span>Y: </span><input type="text" id="input_YC"><br>
+
+        <p id="res_AB"></p>
+        <p id="res_BC"></p>
+        <p id="res_AC"></p>
+
+        <br><br><button onclick="oblicz()">Oblicz</button>
     </body>
 </html>

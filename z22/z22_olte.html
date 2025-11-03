@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function Pole_olter(a_olt, b_olt) {
+                let w = parseFloat(a_olt) * parseFloat(b_olt);
+                document.getElementsByName("pole")[0].value = `${w.toFixed(2).toString()} cm`;
+                
+            }
+
+            function obwod_olter(a_olt, b_olt) {
+                let w = (parseFloat(a_olt)*2) + (parseFloat(b_olt)*2);
+                document.getElementsByName("obw")[0].value = `${w.toFixed(2).toString()} cm^2`;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="formularz" action="..." onsubmit="Pole_olter(this.a_dana_olt.value, this.b_dana_olt.value); obwod_olter(this.a_dana_olt.value, this.b_dana_olt.value); return false;">   
+            Podaj A= 
+                <input  size="6"  name="a_dana_olt"> 
+            Podaj B= 
+                <input  size="6"  name="b_dana_olt"> 
+                            <br>   <br> 
+                <input  TYPE="submit"  Value="oblicz" > 
+                            <br>   <br> 
+            Pole= 
+                <input  size="6"  name="pole"> 
+            Obwód= 
+                <input  size="6"  name="obw"> 
+        </form> 
+
+        <table>
+            <tr name="wyprowadz_pole_olt"></tr>
+            <tr name="wyprowadz_obwod_olt"></tr>
+        </table><br>
+
+    </body>
+</html>
