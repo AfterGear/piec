@@ -5,12 +5,13 @@
             function Pole_olter(a_olt, b_olt) {
                 let w = parseFloat(a_olt) * parseFloat(b_olt);
                 document.getElementsByName("pole")[0].value = `${w.toFixed(2).toString()} cm`;
-                
+                document.getElementsByName("wyprowadz_pole_olt")[0].innerHTML = `Pole = ${w.toFixed(2).toString()} cm`;
             }
 
             function obwod_olter(a_olt, b_olt) {
                 let w = (parseFloat(a_olt)*2) + (parseFloat(b_olt)*2);
                 document.getElementsByName("obw")[0].value = `${w.toFixed(2).toString()} cm^2`;
+                document.getElementsByName("wyprowadz_obwod_olt")[0].innerHTML = `Obwód = ${w.toFixed(2).toString()} cm^2`;
             }
         </script>
     </head>
@@ -28,7 +29,7 @@
             Obwód= 
                 <input  size="6"  name="obw"> 
         </form> 
-
+        <br>
         <table>
             <tr name="wyprowadz_pole_olt"></tr>
             <tr name="wyprowadz_obwod_olt"></tr>

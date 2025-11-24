@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function drabina_olter(d, x) {
+
+                let v =  Math.sqrt((d*d)+(x*x));
+
+                document.getElementsByName("drabina")[0].value = v;
+                document.getElementsByName("wyprowadz_drabina_olt")[0].innerHTML = `Długość Drabiny = ${v.toFixed(2)}`;
+                alert(`Długość Drabiny = ${v.toFixed(2)}`);
+            }
+
+            function alfa_olter(d, x) {
+
+                let sinA = d / Math.sqrt((d*d)+(x*x));
+                let aRad = Math.asin(sinA);
+                let aDeg = aRad * (180 / Math.PI);
+
+                document.getElementsByName("alfa")[0].value = aDeg.toFixed(2);
+                document.getElementsByName("wyprowadz_alfa_olt")[0].innerHTML = `Alfa = ${aDeg.toFixed(2)}`;
+                alert(`Alfa = ${aDeg.toFixed(2)}`)
+            }
+        </script>
+    </head>
+    <body>
+        <p>Pobliczania odległości od drabiny i kąta</p>
+        <form name="formularz" action="..." onsubmit="drabina_olter(this.d_dana_olt.value, this.x_dana_olt.value); alfa_olter(this.d_dana_olt.value, this.x_dana_olt.value); return false;">   
+            Podaj d= 
+                <input  size="6"  name="d_dana_olt"> 
+            Podaj x= 
+                <input  size="6"  name="x_dana_olt"> 
+                            <br>   <br> 
+                <input  TYPE="submit"  Value="oblicz" > 
+                            <br>   <br> 
+            Drabina= 
+                <input  size="6"  name="drabina"> 
+            Alfa= 
+                <input  size="6"  name="alfa"> 
+        </form>
+        <br>
+        <table>
+            <tr name="wyprowadz_drabina_olt"></tr>
+            <tr name="wyprowadz_alfa_olt"></tr>
+        </table><br>
+
+    </body>
+</html>
