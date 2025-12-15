@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            let wiezowiec = {
+                ulica: "Sezamkowa 10",
+                pietra: 20,
+                Wiezowiec_pokaz_olter: function() {
+                    document.write(`Ulica: ${this.ulica}<br>Pietra: ${this.pietra}`);
+                }
+            }
+
+            wiezowiec.Wiezowiec_pokaz_olter(); 
+            wiezowiec.rok_zakonczenia_budowy = 2008; 
+            wiezowiec.wypisz = function() {alert('Rok zakonczenia budowy: ' + this.rok_zakonczenia_budowy + ' rok')} 
+            wiezowiec.wypisz(); 
+        </script>
+    </head>
+    <body>
+        <br><br><br>
+        Programowanie obiektowe. <br> 
+        Obiekt  to  wieżowiec<br> 
+        Pola:<br> 
+        Ulica<br> 
+        Piętra<br> 
+        metoda:  Wiezowiec_pokaz_olter<br> 
+        nowe pole to rok_zakonczenia_budowy <br> 
+        nowa metoda to wypisz();<br>
+    </body>
+</html>
