@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <script type="text/javascript"> 
+            function wiezowiec(pietra_k, ulica_k, rok_zakonczenia_budowy_k)
+            { 
+                this.pietra = pietra_k; 
+                this.ulica = ulica_k;
+                this.rok_zakonczenia_budowy = rok_zakonczenia_budowy_k;   
+            }
+            
+            wiezowiec.prototype.wypisz = function() { 
+                alert(" Pietra: " + this.pietra + ". Ulica: " + this.ulica + ". Rok zakonczenia budowy: " + this.rok_zakonczenia_budowy); 
+            }; 
+            
+            var wiezowiec1 = new wiezowiec(20, "Sezamkowa 20", 2008);
+            var wiezowiec2 = new wiezowiec(25, "Sezamkowa 23", 2010); 
+            wiezowiec1.wypisz();
+            wiezowiec2.wypisz(); 
+            document.write("dostęp do właściwości"+"<br>"); 
+            document.write("pierwszy wiezowiec" + "   " + wiezowiec1.pietra + "   " + wiezowiec1.ulica + "   " + wiezowiec1.rok_zakonczenia_budowy); 
+        </script> 
+    </head> 
+    <body> 
+        <br> 
+        programowanie obiektowe   
+    </body> 
+</html>
