@@ -1,0 +1,23 @@
+<!DOCTYPE html>  
+<html>
+    <body> 
+        <div style="color:red;font-size:50px;"> 
+            wykonał Mikołaj Olter<br>
+            <script language="JavaScript">
+                var x_olt=parseFloat(prompt("podaj argument x=","")); 
+                document.write("czytany argument x="+x_olt.toFixed(2)+"<br>");     
+        
+                function f_olt(x) { 
+                    if (x >= 2) return 9;
+                    if (x > -2 && x < 0) return Math.pow(x + 1, 2);
+                    if (x >= 0 && x < 2) return (x*x*x) + 1;
+                    if (x <= -2) return 1;
+                } 
+        
+                document.write(`f(${x_olt.toFixed(2)})=${f_olt(x_olt)}`); 
+        
+            </script> 
+        </div> 
+    </body> 
+</html> 
+<!--  Olter Z40_JS  --> 
