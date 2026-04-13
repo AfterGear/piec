@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div style="color:red;font-size:42px">
+            <script>
+                
+                let imie = "Mikołaj";
+                let nazwisko = "Olter";
+                let ile_razy_wyswietlic_olt = 11;
+
+                document.write(`ilość wykonania pętli = ${ile_razy_wyswietlic_olt}<br>`);
+                document.write(`wielkość liter = 42px<br><br>`);
+
+                for (i_o = 0; i_o < ile_razy_wyswietlic_olt; i_o++) {
+                    if (i_o % 2 == 0) {
+                        document.write(imie + "<br>");
+                    }
+                    else {
+                        document.write(nazwisko + "<br>");
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>
