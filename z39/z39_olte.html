@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Olter 39_JS</title>
+    </head>
+    <body>
+        <input type="button" name="nazwisko_ucznia" value="Oblicz" onclick="fun_kow()" />
+        <script>
+            function fun_kow() {
+                var x_olt = prompt("Podaj kolor", "");
+                if(x_olt == 1 || x_olt.toLowerCase() == "czerwony")
+                    document.write('<h1 style="color:red;">wczytałeś kolor czerwony</h1><br />');
+                else if(x_olt == 2 || x_olt.toLowerCase() == "green") 
+                    document.write('<h6 style="color:green;">wczytałeś kolor zielony</h6><br />');
+                
+            }
+        </script>
+    </body>
+</html>
