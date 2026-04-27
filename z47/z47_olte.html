@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Z47-Olter</title>
+        <meta charset="utf-8">
+        <style>
+            #nazwisko {
+                color: blue;
+                font-size: 42px;
+            }
+
+            #imie {
+                color: green;
+                font-size: 42px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            
+            let l_olt = parseInt(prompt("Liczba="));
+
+            if (l_olt % 2 == 0) {
+                // Nazwisko
+                for (let i_o = 0; i_o < 11; i_o++) {
+                    document.write("<span id=\"nazwisko\">Olter</span><br>")
+                }
+            }
+            else {
+                // Imie
+                for (let i_o = 0; i_o < 11; i_o++) {
+                    document.write("<span id=\"imie\">Mikołaj</span><br>")
+                }
+            }
+
+        </script>
+    </body>
+</html>
