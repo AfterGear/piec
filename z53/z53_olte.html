@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html lang="pl"> 
+    <head>  
+    <meta charset="utf-8"> 
+        <title>Użycie pętli podwójnej --> Olter</title> 
+        <script language="JavaScript"> 
+
+            let a_olt = parseInt(prompt("ile razy powtórzyć="));
+            let inicjaly_olt = prompt("podaj twoje inicjały=");
+
+            for (let i_olt = 1; i_olt <= a_olt; i_olt++) { 
+                
+                for (let k_olt = 1; k_olt <= i_olt; k_olt++) { 
+                    document.write("&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp");     
+                } 
+                
+                document.write(`${i_olt}_${inicjaly_olt}_${i_olt}<br>`); 
+            } 
+        </script> 
+    </head>
+</html> 

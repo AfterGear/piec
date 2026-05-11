@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            let n_olt = -1;
+
+            do {
+                n_olt = parseFloat(prompt("Podaj silnie"));
+            } while (n_olt < 0);
+
+            let silnia_olt = 1;
+
+            if (n_olt != 0) {
+                for (let i = 1; i <= n_olt; i++) {
+                    silnia_olt *= i;
+                }
+            }
+
+            document.write(`${n_olt}! = ${silnia_olt}`);
+        </script>
+    </body>
+</html>
